@@ -1,0 +1,21 @@
+<div ng-controller="Aba2AlunoController as vm">
+
+    <h3>Contatos</h3>
+
+    <form>
+        <input type="tel" ng-model="vm.form.telefone1" placeholder="Telefone 1">
+        <br>
+        <input type="tel" ng-model="vm.form.telefone2" placeholder="Telefone 2">
+        <br>
+        <input type="tel" ng-model="vm.form.telefone3" placeholder="Telefone 3">
+        <br>
+        <input type="email" ng-model="vm.form.email1" placeholder="Email 1">
+        <br>
+        <input type="email" ng-model="vm.form.email2" placeholder="Email 2">
+        <br>
+        <input type="email" ng-model="vm.form.email3" placeholder="Email 3">
+        <br>
+        <button ng-click="vm.finalizar(); main.concluirAba2()">Enviar</button>
+    </form>
+
+</div>

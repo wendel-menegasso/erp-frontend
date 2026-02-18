@@ -1,0 +1,62 @@
+<div ng-controller="MainController as main">
+
+
+<div class="tabs">
+
+        <div class="tab"
+             ng-class="{active: main.aba === 1}"
+             ng-click="main.abrir(1)">
+            Endereço
+        </div>
+
+        <div class="tab"
+             ng-class="{active: main.aba === 2, disabled: !main.habilitaAba2}"
+             ng-click="main.habilitaAba2 && main.abrir(2)">
+            Contato
+        </div>
+
+        <div class="tab"
+             ng-class="{active: main.aba === 3, disabled: !main.habilitaAba3}"
+             ng-click="main.habilitaAba3 && main.abrir(3)">
+            Documentos
+        </div>
+
+        <div class="tab"
+             ng-class="{active: main.aba === 4, disabled: !main.habilitaAba4}"
+             ng-click="main.habilitaAba4 && main.abrir(4)">
+             Curso
+        </div>
+
+        <div class="tab"
+             ng-class="{active: main.aba === 5, disabled: !main.habilitaAba5}"
+             ng-click="main.habilitaAba5 && main.abrir(5)">
+             Dados Pessoais
+        </div>
+
+    </div>
+
+    <div class="tab-content" ng-switch="main.aba">
+
+        <div ng-switch-when="1">
+            <div ng-include="'view/aba1.html'"></div>
+        </div>
+
+        <div ng-switch-when="2">
+            <div ng-include="'view/aba2.html'"></div>
+        </div>
+
+        <div ng-switch-when="3">
+            <div ng-include="'view/aba3.html'"></div>
+        </div>
+
+        <div ng-switch-when="4">
+            <div ng-include="'view/aba4.html'"></div>
+        </div>
+
+        <div ng-switch-when="5">
+            <div ng-include="'view/aba5.html'"></div>
+        </div>
+
+    </div>
+
+</div>

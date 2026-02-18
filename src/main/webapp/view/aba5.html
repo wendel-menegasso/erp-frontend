@@ -1,0 +1,21 @@
+<div ng-controller="Aba5AlunoController as vm">
+
+<form>
+    <input type="text" ng-model="vm.form.nome" placeholder="Nome">
+    <br>
+    <input type="text" ng-model="vm.form.pai" placeholder="Pai">
+    <br>
+    <input type="text" ng-model="vm.form.mae" placeholder="Mãe">
+    <br>
+    <input type="date" ng-model="vm.form.data" placeholder="Data de nascimento">
+    <br>
+    <input type="checkbox" ng-model="vm.form.bolsista" placeholder="Bolsista?">
+    <br>
+    <input type="text" ng-model="vm.form.valorBolsa" placeholder="Valor bolsa">
+    <br>
+    <input type="text" ng-model="vm.form.numeroDeMatricula" placeholder="Numero de matrícula">
+    <br>
+    <button ng-click="vm.enviar()">Salvar</button>
+</form>
+
+</div>

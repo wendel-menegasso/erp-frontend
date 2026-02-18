@@ -1,0 +1,17 @@
+<div ng-controller="Aba3AlunoController as vm">
+
+    <h3>Documentos</h3>
+
+    <form>
+        <input type="text" ng-model="vm.form.rg" placeholder="RG">
+        <br>
+        <input type="text" ng-model="vm.form.cpf" placeholder="CPF">
+        <br>
+        <input type="text" ng-model="vm.form.carteiraDeTrabalho" placeholder="Carteira de trabalho">
+        <br>
+        <input type="text" ng-model="vm.form.titulo" placeholder="Titulo">
+        <br>
+        <button ng-click="vm.finalizar(); main.concluirAba3()">Enviar</button>
+    </form>
+
+</div>
