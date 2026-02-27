@@ -22,6 +22,7 @@ angular.module('appLogin')
                                              contato,
                                              documento,
                                              curso).then(function() {
+        WizardStateService.remove();
     });
   };
 

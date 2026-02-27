@@ -1,0 +1,24 @@
+<div class="layout" ng-controller="MenuCtrl">
+
+  <!-- MENU LATERAL -->
+  <div class="sidebar">
+    <ul class="menu">
+      <li ng-repeat="item in menu">
+        <div class="menu-title" ng-click="toggle(item)">
+          {{ item.title }}
+        </div>
+
+        <ul class="submenu" ng-show="item.open">
+          <li ng-repeat="sub in item.submenu">
+            <a ng-href="{{ sub.link }}">{{ sub.label }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ÁREA DE CONTEÚDO (90%) -->
+    <div class="conteudo" ng-include="paginaAtual"></div>
+
+</div>
+

@@ -11,16 +11,21 @@ angular.module('appLogin', ['ngRoute'])
         controllerAs: 'vm'
       })
       .when('/dashboard', {
-        templateUrl: 'view/dashboard.html',
-        controller: 'DashboardController',
+        templateUrl: 'view/menuLateral.html',
+        controller: 'MenuCtrl',
         controllerAs: 'vm'
       })
+    .when('/usuarios', {
+      templateUrl: 'view/usuario.html',
+      controller: 'UsuarioController',
+      controllerAs: 'vm'
+    })
       .when('/admin', {
             templateUrl: 'view/adminArea.html',
             controller: 'AdminAreaController',
             controllerAs: 'vm'
       })
-        .when('/aluno', {
+        .when('/matricula', {
           templateUrl: 'view/aluno.html',
           controller: 'MainController',
           controllerAs: 'vm'

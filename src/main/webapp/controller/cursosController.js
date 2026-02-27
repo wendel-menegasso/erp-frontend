@@ -9,5 +9,4 @@ angular.module('appLogin')
     }, function(error) {
         console.error("Erro ao carregar cursos:", error);
     });
-
 });

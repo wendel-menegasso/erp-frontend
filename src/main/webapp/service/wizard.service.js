@@ -82,4 +82,12 @@ this.getCurso = function() {
     return id;
 };
 
+this.remove = function() {
+    localStorage.removeItem("endereco");
+    localStorage.removeItem("contato");
+    localStorage.removeItem("documentoo");
+    localStorage.removeItem("curso");
+    console.log("Apagado!!!");
+}
+
 });

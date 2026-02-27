@@ -10,5 +10,4 @@ angular.module('appLogin')
   this.getCursos = function() {
     return $http.get(apiUrl);
   };
-
 });

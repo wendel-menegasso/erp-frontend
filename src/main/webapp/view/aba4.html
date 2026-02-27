@@ -8,20 +8,18 @@
             <label>Selecione um curso:</label>
 
             <select ng-model="vm.cursoSelecionado"
-                    ng-options="curso as curso.nome for curso in vm.cursos"
-            <option value="{{curso.id}}">-- Escolha --</option>
+                    ng-options="curso as (curso.nome + ' - ' + curso.periodo) for curso in vm.cursos"
+                    ng-change="vm.getPeriodo(vm.cursoSelecionado)">
+                <option value="">-- Escolha --</option>
             </select>
 
-            <p>Curso selecionado: {{ vm.cursoSelecionado }}</p>
-
-        </div>
-
-        <select ng-model="periodo">
-            <option value="0">Manha</option>
+            <select ng-model="vm.periodoSelecionado">
+            <option value="0">Manhã</option>
             <option value="1">Tarde</option>
             <option value="2">Noite</option>
         </select>
         <button ng-click="vm.finalizar(); main.concluirAba4()">Enviar</button>
+            </div>
     </form>
 </div>
 

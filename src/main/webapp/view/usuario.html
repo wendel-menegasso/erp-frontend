@@ -1,0 +1,57 @@
+<div ng-controller="UsuarioController as vm">
+    <h3>Usuario</h3>
+    <div class="modal" ng-show="popupAberto">
+        <div class="modal-conteudo">
+            <h3>Novo Item</h3>
+
+            <label>Usuário:</label>
+            <input type="text" ng-model="novoItem.nome">
+
+            <label>Senha:</label>
+            <input type="password" ng-model="novoItem.preco">
+
+            <button ng-click="salvarNovo()">
+                <i class="fa fa-floppy-o"></i>
+            </button>
+
+            <button ng-click="fecharPopup()" style="color: red;">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <table border="1" width="100%">
+        <thead>
+        <tr>
+            <th>Usuário</th>
+            <th>Senha</th>
+            <th>Ativo</th>
+            <th>Ação</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="u in usuarios">
+            <td>{{ u.username }}</td>
+            <td>{{ u.passwordHash }}</td>
+            <td>
+                <span ng-if="u.ativo==true">Sim</span>
+                <span ng-if="!u.ativo==true">Não</span>
+            </td>
+            <td>
+                <button ng-click="editar($index)">
+                    <i class="fa fa-pencil"></i>
+                </button>
+                <button ng-click="salvar()">
+                    <i class="fa fa-floppy-o"></i>
+                </button>
+                <button ng-click="excluir(item)" style="color: red;">
+                    <i class="fa fa-times"></i>
+                </button>
+                <button class="btn-icone" ng-click="abrirPopup()">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</div>
